@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       
+        <script type="text/javascript">
+        function calculate(){
+            var p=0;
+            var n=0;
+            var r=0;
+            var SI=0;
+            
+            p=parseInt(document.getElementById("principal").value);
+            n=parseInt(document.getElementById("year").value);
+            r=parseInt(document.getElementById("rate").value);
+
+            SI=(p*n*r)/100;
+            
+            document.getElementById("res").innerHTML=SI;
+           
+        }
+        </script>
+     
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+                <h1>Simple Interset calculator</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label class="form-group">Principal</label>
+                        <input class="form-control" type="text" id="principal">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group">Year</label>
+                        <input class="form-control" type="text" id="year">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group">Rate of Interset</label>
+                        <input class="form-control" type="text" id="rate">
+                    </div>
+                    <button class="btn btn-primary" type="button" onclick="calculate()">Calculate</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 id="res">$</h1>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
